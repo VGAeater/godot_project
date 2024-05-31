@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3deddfojhlrh"]
+
+[ext_resource type="Script" path="res://movement.gd" id="1_sfkan"]
+[ext_resource type="Texture2D" uid="uid://ddrmp7d4x1wbm" path="res://hourglass_0.png" id="2_jy613"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_sfkan")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(8, 8)
+texture = ExtResource("2_jy613")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
